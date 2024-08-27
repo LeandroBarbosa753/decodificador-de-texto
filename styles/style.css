@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+  --cor-primaria: #203a78;
+  --cor-primaria-hover: #1a2f5e;
+  --cor-secundaria: #f3f5fc;
+  --cor-borda: #d3d6db;
+  --cor-texto-principal: #1e2a38;
+  --cor-texto-secundario: #737a8d;
+  --cor-fundo-branco: #ffffff;
+  --cor-fundo-escuro: #3e4a59;
+  --fonte-principal: 'Inter', sans-serif;
+  --tamanho-fonte-padrao: 1rem;
+  --tamanho-fonte-pequena: 0.875rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fonte-principal);
+}
+
+body {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto-principal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+}
+
+.cabecalho {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.cabecalho__logo img {
+  height: 40px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1000px;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.container__area {
+  flex: 1;
+  padding: 2rem;
+}
+
+.container__area__texto {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid var(--cor-borda);
+  font-size: var(--tamanho-fonte-padrao);
+  padding: 0.5rem 0;
+  color: var(--cor-texto-principal);
+  transition: border-color 0.3s ease;
+  resize: none;
+  overflow: hidden;
+  min-height: 40px;
+}
+
+.container__area__texto:focus {
+  outline: none;
+  border-bottom-color: var(--cor-primaria);
+}
+
+.container__area__notificacao {
+  display: flex;
+  align-items: center;
+  font-size: var(--tamanho-fonte-pequena);
+  color: var(--cor-texto-secundario);
+  margin-top: 1rem;
+}
+
+.container__area__notificacao img {
+  margin-right: 0.5rem;
+}
+
+.container__area__buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.container__area__buttons__criptografar,
+.container__area__buttons__descriptografar {
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: var(--tamanho-fonte-padrao);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.container__area__buttons__criptografar {
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo-branco);
+  border: none;
+}
+
+.container__area__buttons__criptografar:hover {
+  background-color: var(--cor-primaria-hover);
+}
+
+.container__area__buttons__descriptografar {
+  background-color: transparent;
+  color: var(--cor-primaria);
+  border: 1px solid var(--cor-primaria);
+}
+
+.container__area__buttons__descriptografar:hover {
+  background-color: var(--cor-secundaria);
+}
+.container__area__erro {
+  font-size: var(--tamanho-fonte-pequena);
+  color: red;
+  margin-top: 1rem;
+  display: none;
+}
+
+
+.container__apresentacao {
+  width: 400px; 
+  height: 744px; 
+  background-color: var(--cor-fundo-branco);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.container__apresentacao img {
+  width: 336px; 
+  height: 304px;
+  object-fit: cover; 
+  margin-bottom: 1.5rem;
+}
+
+
+.container__apresentacao__mensagem {
+  font-size: var(--tamanho-fonte-padrao);
+  color: var(--cor-texto-principal);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.container__apresentacao__mensagem__sub {
+  font-size: var(--tamanho-fonte-pequena);
+  color: var(--cor-texto-secundario);
+  margin-bottom: 1.5rem;
+}
+
+.container__apresentacao__mensagem__copiado {
+  font-size: var(--tamanho-fonte-padrao);
+  color: var(--cor-texto-principal);
+  margin-top: 1rem;
+  font-weight: 600;
+  display: none; 
+}
+
+.container__apresentacao__copiar {
+  margin-top: auto;
+  padding: 0.75rem 2rem;
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo-branco);
+  border: none;
+  border-radius: 8px;
+  font-size: var(--tamanho-fonte-padrao);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block; 
+  align-self: center; 
+}
+
+.container__apresentacao__copiar:hover {
+  background-color: var(--cor-primaria-hover);
+}
+
+.container__apresentacao__mensagem__criptografada {
+  font-size: var(--tamanho-fonte-padrao);
+  color: var(--cor-texto-principal);
+  margin-bottom: 1.5rem;
+  max-height: 150px; 
+  overflow-y: auto; 
+  flex-grow: 1;
+  align-self: flex-start; 
+  width: 100%;
+}
+
+.rodape {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo-branco);
+  position: absolute;
+  bottom: 0;
+}

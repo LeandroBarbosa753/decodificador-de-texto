@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <script src="app.js" defer></script>
+  <title>Decodificador de texto</title>
+</head>
+<body>
+  <header class="cabecalho">
+    <nav class="cabecalho__logo">
+      <img src="images/Frame 6.png" alt="Logo" />
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="container__area">
+      <textarea
+        class="container__area__texto"
+        placeholder="Digite seu texto"
+        id="inputTexto"
+      ></textarea>
+
+      <p class="container__area__notificacao">
+        <img src="images/Vector.png" alt="Ícone de aviso" />
+        Apenas letras minúsculas e sem acentos.
+      </p>
+
+      <div class="container__area__buttons">
+        <button
+          class="container__area__buttons__criptografar"
+          onclick="criptografar()"
+        >
+          Criptografar
+        </button>
+        <button
+          class="container__area__buttons__descriptografar"
+          onclick="descriptografar()"
+        >
+          Descriptografar
+        </button>
+      </div>
+      <p class="container__area__erro" id="mensagemErro" style="display: none; color: red;">
+  Remova letras maiúsculas e acentos.
+</p>
+
+    </div>
+
+   <div class="container__apresentacao">
+  <img src="images/mensagem.png" alt="Imagem de mensagem" id="imagemMensagem" />
+<p class="container__apresentacao__mensagem" id="mensagemNenhuma">
+  Nenhuma mensagem encontrada
+</p>
+  <p class="container__apresentacao__mensagem__sub" id="mensagemSub">
+    Digite um texto que você deseja criptografar ou descriptografar.
+  </p>
+  <p class="container__apresentacao__mensagem__criptografada" id="outputMensagem" style="display: none;"></p>
+  <p class="container__apresentacao__mensagem__copiado" id="mensagemCopiado" style="display: none;">
+  Mensagem copiada para a área de transferência!
+</p>
+
+<button class="container__apresentacao__copiar" id="botaoCopiar" style="display: none;" onclick="copiarTexto()">
+  Copiar
+</button>
+</div>
+
+
+  </div>
+
+  <footer class="rodape">Desenvolvido por Leandro - 2024</footer>
+</body>
+</html>
