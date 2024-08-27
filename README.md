@@ -26,3 +26,11 @@ Você pode criptografar e descriptografar o texto diretamente na interface web f
     <img src="https://skillicons.dev/icons?i=html,css,javascript" />
   </a>
 </p>
+
+## Previa do projeto
+
+<p align="center">
+  <a>
+    <img src="images/previa.png" />
+  </a>
+</p>
